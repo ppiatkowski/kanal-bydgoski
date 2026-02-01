@@ -69,7 +69,7 @@ img {
 }
 
 .site-title {
-  color: var(--color-text);
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -505,13 +505,13 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--color-text-light);
   color: white;
   transition: background-color 0.3s ease;
 }
 
 .social-link:hover {
-  background: var(--color-accent-dark);
+  background: var(--color-text);
   color: white;
 }
 
