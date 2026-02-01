@@ -1,0 +1,36 @@
+baseURL = "https://example.github.io/kb-www/"
+languageCode = "pl"
+title = "Komitet Poparcia Przywrócenia Starego Kanału Bydgoskiego"
+
+[params]
+  description = "Koncepcja Przywrócenia Starego Kanału Bydgoskiego"
+  accentColor = "#2E7D7B"
+  email = "stowarzyszenie@bydgoskiruchmiejski.pl"
+  facebookURL = "https://www.facebook.com/bydgoskiruchmiejski"
+
+[menu]
+  [[menu.main]]
+    identifier = "koncepcja"
+    name = "Koncepcja"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "faq"
+    name = "Najczęściej zadawane pytania"
+    url = "/faq/"
+    weight = 2
+  [[menu.main]]
+    identifier = "kim-jestesmy"
+    name = "Kim jesteśmy?"
+    url = "/kim-jestesmy/"
+    weight = 3
+  [[menu.main]]
+    identifier = "jak-dolaczyc"
+    name = "Jak dołączyć"
+    url = "/jak-dolaczyc/"
+    weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

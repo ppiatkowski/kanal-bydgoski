@@ -1,0 +1,74 @@
+{{ define "main" }}
+<div class="page-container">
+  {{/* Photo Grid - rows of 3 images, superwide gets its own row */}}
+  <div class="photo-grid">
+    {{ $images := .Params.images }}
+    {{/* Filter out superwide images */}}
+    {{ $regular := slice }}
+    {{ range $images }}
+      {{ if not .superwide }}
+        {{ $regular = $regular | append . }}
+      {{ end }}
+    {{ end }}
+    {{/* Render regular images in rows of 3 */}}
+    {{ range $i, $img := $regular }}
+      {{ $rowIndex := mod $i 3 }}
+      {{ if eq $rowIndex 0 }}
+        {{ $img1 := index $regular $i }}
+        {{ $img2 := index $regular (add $i 1) }}
+        {{ $img3 := index $regular (add $i 2) }}
+        <div class="photo-row{{ if $img1.wide }} has-wide wide-first{{ else if (and $img2 $img2.wide) }} has-wide wide-second{{ else if (and $img3 $img3.wide) }} has-wide wide-third{{ end }}">
+          <div class="photo-item{{ if $img1.wide }} wide{{ end }}">
+            <a href="{{ printf "wizualizacje/%s" $img1.file | relURL }}" class="photo-link">
+              <img src="{{ printf "wizualizacje/%s" $img1.file | relURL }}" alt="Wizualizacja projektu" loading="lazy">
+            </a>
+          </div>
+          {{ with $img2 }}
+          <div class="photo-item{{ if .wide }} wide{{ end }}">
+            <a href="{{ printf "wizualizacje/%s" .file | relURL }}" class="photo-link">
+              <img src="{{ printf "wizualizacje/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy">
+            </a>
+          </div>
+          {{ end }}
+          {{ with $img3 }}
+          <div class="photo-item{{ if .wide }} wide{{ end }}">
+            <a href="{{ printf "wizualizacje/%s" .file | relURL }}" class="photo-link">
+              <img src="{{ printf "wizualizacje/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy">
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      {{ end }}
+    {{ end }}
+    {{/* Render superwide images in their own rows */}}
+    {{ range $images }}
+      {{ if .superwide }}
+        <div class="photo-row superwide">
+          <div class="photo-item superwide">
+            <a href="{{ printf "wizualizacje/%s" .file | relURL }}" class="photo-link">
+              <img src="{{ printf "wizualizacje/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy">
+            </a>
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  {{/* Content Section */}}
+  <div class="content-section">
+    {{ .Content }}
+  </div>
+
+  {{/* YouTube Video */}}
+  {{ with .Params.youtubeID }}
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube.com/embed/{{ . }}"
+      title="Wideo o projekcie"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

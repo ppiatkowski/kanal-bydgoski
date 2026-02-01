@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="page-container">
+  <p class="partners-intro">{{ .Params.intro }}</p>
+
+  <div class="partners-grid">
+    {{ range .Params.partners }}
+    <div class="partner-item">
+      {{ if .logo }}
+      <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="partner-logo" loading="lazy">
+      {{ end }}
+      <span class="partner-name">{{ .name }}</span>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}
