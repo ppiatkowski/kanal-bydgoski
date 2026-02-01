@@ -1,5 +1,6 @@
 ---
 title: "Koncepcja"
+intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 youtubeID: "Z0LpndsMA0w"
 images:
   - file: "BRM_01.jpg"
@@ -17,7 +18,7 @@ images:
   - file: "BRM_91.jpg"
   - file: "BRM_93.jpg"
   - file: "BRM_94.jpg"
-  - file: "funkcje.png"
+  - file: "funkcje.jpg"
     superwide: true
 ---
 

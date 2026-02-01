@@ -175,6 +175,15 @@ img {
   color: var(--color-text);
 }
 
+/* Intro Text */
+.intro-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  max-width: 800px;
+}
+
 /* Photo Grid */
 .photo-grid {
   display: flex;

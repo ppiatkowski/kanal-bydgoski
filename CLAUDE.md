@@ -23,7 +23,8 @@ Static website built with Hugo for an architectural/urbanist project about resto
 └── static/
     ├── css/main.css     # All styles
     ├── js/main.js       # Hamburger menu, FAQ accordion
-    ├── wizualizacje/    # Project photos
+    ├── wizualizacje/    # Project photos (full resolution)
+    │   └── thumbs/      # Thumbnails for grid display (1200px max)
     └── logo/            # Partner logos
 ```
 
@@ -56,7 +57,10 @@ images:
 
 **To add new photos:**
 1. Put image file in `static/wizualizacje/`
-2. Add entry to `images:` list in `content/_index.md`
+2. Generate thumbnail: `sips -Z 1200 static/wizualizacje/FILENAME --out static/wizualizacje/thumbs/FILENAME`
+3. Add entry to `images:` list in `content/_index.md`
+
+Note: The grid displays thumbnails (from `thumbs/`) for fast loading; clicking opens full-resolution image.
 
 ### Partners (`content/kim-jestesmy.md`)
 
@@ -77,6 +81,14 @@ questions:
   - question: "Question text?"
     answer: "Answer text."
 ```
+
+### Intro text (`content/_index.md`)
+
+```yaml
+intro: "Your intro paragraph text here."
+```
+
+Displayed at the top of the homepage above the photo grid.
 
 ### YouTube video (`content/_index.md`)
 
