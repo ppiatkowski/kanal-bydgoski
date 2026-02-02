@@ -37,7 +37,7 @@ partners:
     logo: "logo/Pejzaz.jpg"
   - name: "Muzeum Mydła i Historii Brudu"
     logo: "logo/SONDM.png"
-  - name: "Stowarzyszenie Kreatywna Bydgoszcz"
+  - name: "Stowarzyszenie Kreaktywna Bydgoszcz"
   - name: "Bydgoska Lokalna Organizacja Turystyczna ByLOT"
     logo: "logo/bylot.png"
   - name: "Stowarzyszenie Waleczne Serca"
