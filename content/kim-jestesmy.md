@@ -31,7 +31,7 @@ partners:
     logo: "logo/szlak-brdy_logo_invers.svg"
   - name: "Wydział Nauk Geograficznych Uniwersytetu Kazimierza Wielkiego w Bydgoszczy"
     logo: "logo/ukw-mini.svg"
-  - name: "La Mare"
+  - name: "La Mare Houseboats"
     logo: "logo/LaMare.png"
   - name: "Wydawnictwo Pejzaż"
     logo: "logo/Pejzaz.jpg"

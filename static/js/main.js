@@ -1,32 +1,4 @@
-// Hamburger menu toggle
 document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.main-nav');
-
-  if (hamburger && nav) {
-    hamburger.addEventListener('click', function() {
-      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', !isExpanded);
-      nav.classList.toggle('open');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
-        hamburger.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('open');
-      }
-    });
-
-    // Close menu when clicking a link
-    nav.querySelectorAll('.nav-link').forEach(function(link) {
-      link.addEventListener('click', function() {
-        hamburger.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('open');
-      });
-    });
-  }
-
   // Gallery lightbox
   const gallery = document.querySelector('.gallery-lightbox');
   const galleryImg = document.querySelector('.gallery-image');
