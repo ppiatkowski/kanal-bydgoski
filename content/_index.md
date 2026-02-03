@@ -3,22 +3,22 @@ title: "Koncepcja"
 intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 youtubeID: "Z0LpndsMA0w"
 images:
-  - file: "BRM_01.jpg"
+  - file: "BRM_01.webp"
     wide: true
-  - file: "BRM_02.jpg"
-  - file: "BRM_13.jpg"
-  - file: "BRM_18.jpg"
-  - file: "BRM_19.jpg"
-  - file: "BRM_03.jpg"
+  - file: "BRM_02.webp"
+  - file: "BRM_13.webp"
+  - file: "BRM_18.webp"
+  - file: "BRM_19.webp"
+  - file: "BRM_03.webp"
     wide: true
-  - file: "BRM_06.jpg"
+  - file: "BRM_06.webp"
     wide: true
-  - file: "BRM_21.jpg"
-  - file: "BRM_22.jpg"
-  - file: "BRM_91.jpg"
-  - file: "BRM_93.jpg"
-  - file: "BRM_94.jpg"
-  - file: "funkcje.jpg"
+  - file: "BRM_21.webp"
+  - file: "BRM_22.webp"
+  - file: "BRM_91.webp"
+  - file: "BRM_93.webp"
+  - file: "BRM_94.webp"
+  - file: "funkcje.webp"
     superwide: true
 ---
 
