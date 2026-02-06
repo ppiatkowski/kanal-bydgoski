@@ -84,4 +84,37 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
+
+  // Video card accordion
+  var videoCards = document.querySelectorAll('.video-card');
+
+  videoCards.forEach(function(card) {
+    var header = card.querySelector('.video-card-header');
+
+    if (header) {
+      header.addEventListener('click', function() {
+        var isActive = card.classList.contains('active');
+
+        // Close all cards and remove iframes
+        videoCards.forEach(function(otherCard) {
+          otherCard.classList.remove('active');
+          otherCard.querySelector('.video-card-header').setAttribute('aria-expanded', 'false');
+          otherCard.querySelector('.video-card-player').innerHTML = '';
+        });
+
+        // Toggle current card
+        if (!isActive) {
+          card.classList.add('active');
+          header.setAttribute('aria-expanded', 'true');
+          var youtubeId = card.getAttribute('data-youtube-id');
+          var player = card.querySelector('.video-card-player');
+          var iframe = document.createElement('iframe');
+          iframe.src = 'https://www.youtube.com/embed/' + youtubeId + '?autoplay=1';
+          iframe.setAttribute('allow', 'autoplay; encrypted-media');
+          iframe.setAttribute('allowfullscreen', '');
+          player.appendChild(iframe);
+        }
+      });
+    }
+  });
 });

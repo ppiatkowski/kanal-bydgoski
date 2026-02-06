@@ -1,6 +1,6 @@
 ---
 title: "Koncepcja"
-intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+intro: ""
 youtubeID: "Z0LpndsMA0w"
 images:
   - file: "BRM_01.webp"
