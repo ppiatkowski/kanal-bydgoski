@@ -2,6 +2,8 @@
 
 Static website built with Hugo for an architectural/urbanist project about restoring Bydgoszcz Canal.
 
+**Keep this file in sync with the project.** Whenever you make changes that affect project structure, content format, design, or configuration — update this file accordingly.
+
 ## Commands
 
 - `hugo server` - Start dev server at http://localhost:1313/
@@ -13,12 +15,13 @@ Static website built with Hugo for an architectural/urbanist project about resto
 ├── config.toml          # Site config (title, menu, footer params)
 ├── content/
 │   ├── _index.md        # Homepage - photo grid config & text
+│   ├── konferencja.md   # Conference page - video list
 │   ├── faq.md           # FAQ questions (accordion)
 │   ├── kim-jestesmy.md  # Partners list
 │   └── jak-dolaczyc.md  # Join page text
 ├── layouts/
 │   ├── index.html       # Homepage template
-│   ├── _default/        # Page templates (baseof, single, faq, etc.)
+│   ├── _default/        # Page templates (baseof, single, faq, konferencja, etc.)
 │   └── partials/        # Header, footer
 └── static/
     ├── css/main.css     # All styles
@@ -31,7 +34,6 @@ Static website built with Hugo for an architectural/urbanist project about resto
 ## Design
 
 - **Font:** Jost (Google Fonts)
-- **Accent color:** #2E7D7B (teal)
 - **Mobile:** Hamburger menu at 768px breakpoint
 
 ## Content Editing
@@ -74,6 +76,14 @@ partners:
 1. (Optional) Put logo in `static/logo/`
 2. Add entry to `partners:` list
 
+### Conference videos (`content/konferencja.md`)
+
+```yaml
+videos:
+  - title: "Speaker: Talk title"
+    youtubeID: "VIDEO_ID"        # Just the ID, not full URL
+```
+
 ### FAQ (`content/faq.md`)
 
 ```yaml
@@ -109,4 +119,4 @@ youtubeID: "Z0LpndsMA0w"    # Just the ID, not full URL
 - **Images go in `static/` folder** - the `assets/` folder was removed to avoid duplication
 - **Logo paths in kim-jestesmy.md** use relative paths without leading slash: `logo/file.png` (not `/logo/file.png`)
 - **After adding/changing images**, Hugo dev server auto-rebuilds; just refresh browser
-- **baseURL in config.toml** is set for GitHub Pages but not deployed yet
+- **baseURL in config.toml** is set for GitHub Pages deployment
