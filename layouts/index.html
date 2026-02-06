@@ -25,20 +25,20 @@
         <div class="photo-row{{ if $img1.wide }} has-wide wide-first{{ else if (and $img2 $img2.wide) }} has-wide wide-second{{ else if (and $img3 $img3.wide) }} has-wide wide-third{{ end }}">
           <div class="photo-item{{ if $img1.wide }} wide{{ end }}">
             <a href="{{ printf "wizualizacje/%s" $img1.file | relURL }}" class="photo-link">
-              <img src="{{ printf "wizualizacje/thumbs/%s" $img1.file | relURL }}" alt="Wizualizacja projektu" loading="lazy">
+              <img src="{{ printf "wizualizacje/thumbs/%s" $img1.file | relURL }}" alt="Wizualizacja projektu" loading="lazy" width="1200" height="800">
             </a>
           </div>
           {{ with $img2 }}
           <div class="photo-item{{ if .wide }} wide{{ end }}">
             <a href="{{ printf "wizualizacje/%s" .file | relURL }}" class="photo-link">
-              <img src="{{ printf "wizualizacje/thumbs/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy">
+              <img src="{{ printf "wizualizacje/thumbs/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy" width="1200" height="800">
             </a>
           </div>
           {{ end }}
           {{ with $img3 }}
           <div class="photo-item{{ if .wide }} wide{{ end }}">
             <a href="{{ printf "wizualizacje/%s" .file | relURL }}" class="photo-link">
-              <img src="{{ printf "wizualizacje/thumbs/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy">
+              <img src="{{ printf "wizualizacje/thumbs/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy" width="1200" height="800">
             </a>
           </div>
           {{ end }}
@@ -51,7 +51,7 @@
         <div class="photo-row superwide">
           <div class="photo-item superwide">
             <a href="{{ printf "wizualizacje/%s" .file | relURL }}" class="photo-link">
-              <img src="{{ printf "wizualizacje/thumbs/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy">
+              <img src="{{ printf "wizualizacje/thumbs/%s" .file | relURL }}" alt="Wizualizacja projektu" loading="lazy" width="1200" height="800">
             </a>
           </div>
         </div>

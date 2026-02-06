@@ -6,7 +6,7 @@
     {{ range .Params.partners }}
     <div class="partner-item">
       {{ if .logo }}
-      <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="partner-logo" loading="lazy">
+      <img src="{{ .logo | relURL }}" alt="{{ .name }}" class="partner-logo" loading="lazy" width="120" height="80">
       {{ end }}
       <span class="partner-name">{{ .name }}</span>
     </div>
