@@ -6,6 +6,7 @@
   --color-text-light: #666;
   --color-bg: #fff;
   --color-bg-light: #f8f9fa;
+  --color-bg-green: #F0F7F0;
   --color-border: #e0e0e0;
   --font-family: 'Jost', sans-serif;
   --max-width: 1200px;
@@ -21,7 +22,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: rgb(240, 247, 240);
+  background: var(--color-bg-green);
 }
 
 body {
@@ -29,7 +30,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: rgb(240, 247, 240);
+  background-color: var(--color-bg-green);
 }
 
 a {
@@ -50,7 +51,7 @@ img {
 
 /* Header */
 .site-header {
-  background: rgba(240, 247, 240, 0.9);
+  background: color-mix(in srgb, var(--color-bg-green) 90%, transparent);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 2px solid var(--color-accent);
