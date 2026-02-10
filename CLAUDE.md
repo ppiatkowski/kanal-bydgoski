@@ -34,7 +34,6 @@ Static website built with Hugo for an architectural/urbanist project about resto
 ## Design
 
 - **Font:** Jost (Google Fonts)
-- **Mobile:** Hamburger menu at 768px breakpoint
 
 ## Content Editing
 
