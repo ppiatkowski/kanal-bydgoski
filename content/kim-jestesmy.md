@@ -19,6 +19,8 @@ partners:
     logo: "logo/Modrzew.png"
   - name: "Fundacja Kanał Cooltura"
     logo: "logo/KanalCooltura.jpg"
+  - name: "Rada Osiedla Bocianowo-Śródmieście-Stare Miasto"
+    logo: "logo/RO-BSSM.png"
   - name: "Forum Rozwoju Aglomeracji Gdańskiej"
     logo: "logo/FRAG.png"
   - name: 'AWZ Deweloper'
