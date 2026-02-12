@@ -1,3 +1,8 @@
+// Validate YouTube video ID format (11 chars, alphanumeric + hyphen/underscore)
+function isValidYoutubeId(id) {
+  return typeof id === 'string' && /^[a-zA-Z0-9_-]{11}$/.test(id);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Gallery lightbox
   const gallery = document.querySelector('.gallery-lightbox');
@@ -101,14 +106,18 @@ document.addEventListener('DOMContentLoaded', function() {
         videoCards.forEach(function(otherCard) {
           otherCard.classList.remove('active');
           otherCard.querySelector('.video-card-header').setAttribute('aria-expanded', 'false');
-          otherCard.querySelector('.video-card-player').innerHTML = '';
+          otherCard.querySelector('.video-card-player').textContent = '';
         });
 
         // Toggle current card
         if (!isActive) {
+          var youtubeId = card.getAttribute('data-youtube-id');
+          if (!isValidYoutubeId(youtubeId)) {
+            console.error('Invalid YouTube ID:', youtubeId);
+            return;
+          }
           card.classList.add('active');
           header.setAttribute('aria-expanded', 'true');
-          var youtubeId = card.getAttribute('data-youtube-id');
           var player = card.querySelector('.video-card-player');
           var iframe = document.createElement('iframe');
           iframe.src = 'https://www.youtube.com/embed/' + youtubeId + '?autoplay=1';
