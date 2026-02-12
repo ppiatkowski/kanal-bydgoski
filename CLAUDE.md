@@ -42,6 +42,7 @@ Static website built with Hugo for an architectural/urbanist project about resto
 ```yaml
 images:
   - file: "photo.jpg"           # Regular image (1/3 width)
+    alt: "Description of image" # Alt text for accessibility (recommended)
   - file: "photo2.jpg"
     wide: true                  # Wide image (2/3 width, others stack)
   - file: "photo3.jpg"

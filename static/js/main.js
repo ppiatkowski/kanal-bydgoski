@@ -14,11 +14,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let currentIndex = 0;
   let images = [];
+  let altTexts = [];
+  let lastFocusedElement = null;
+  const focusableElements = [galleryClose, galleryPrev, galleryNext];
 
   if (gallery && photoLinks.length > 0) {
-    // Collect all image URLs
+    // Collect all image URLs and alt texts
     photoLinks.forEach(function(link, index) {
       images.push(link.href);
+      var img = link.querySelector('img');
+      altTexts.push(img ? img.alt : 'Wizualizacja projektu');
 
       link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -28,24 +33,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function openGallery(index) {
+      lastFocusedElement = document.activeElement;
       galleryImg.src = images[index];
+      galleryImg.alt = altTexts[index];
       gallery.classList.add('active');
+      gallery.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      galleryClose.focus();
     }
 
     function closeGallery() {
       gallery.classList.remove('active');
+      gallery.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
     }
+
+    // Focus trap within modal
+    gallery.addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab') return;
+
+      var firstEl = focusableElements[0];
+      var lastEl = focusableElements[focusableElements.length - 1];
+
+      if (e.shiftKey && document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      } else if (!e.shiftKey && document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    });
 
     function showPrev() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       galleryImg.src = images[currentIndex];
+      galleryImg.alt = altTexts[currentIndex];
     }
 
     function showNext() {
       currentIndex = (currentIndex + 1) % images.length;
       galleryImg.src = images[currentIndex];
+      galleryImg.alt = altTexts[currentIndex];
     }
 
     galleryClose.addEventListener('click', closeGallery);

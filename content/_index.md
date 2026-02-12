@@ -5,21 +5,34 @@ youtubeID: "Z0LpndsMA0w"
 images:
   - file: "BRM_01.webp"
     wide: true
+    alt: "Wizualizacja przywróconego Starego Kanału Bydgoskiego wzdłuż ulicy Focha"
   - file: "BRM_02.webp"
+    alt: ""
   - file: "BRM_13.webp"
+    alt: ""
   - file: "BRM_18.webp"
+    alt: ""
   - file: "BRM_19.webp"
+    alt: ""
   - file: "BRM_03.webp"
     wide: true
+    alt: ""
   - file: "BRM_06.webp"
     wide: true
+    alt: ""
   - file: "BRM_21.webp"
+    alt: ""
   - file: "BRM_22.webp"
+    alt: ""
   - file: "BRM_91.webp"
+    alt: ""
   - file: "BRM_93.webp"
+    alt: ""
   - file: "BRM_94.webp"
+    alt: ""
   - file: "funkcje.webp"
     superwide: true
+    alt: ""
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
