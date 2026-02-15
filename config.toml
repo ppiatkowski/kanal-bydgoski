@@ -14,25 +14,30 @@ title = "Komitet Poparcia Przywrócenia Starego Kanału Bydgoskiego"
     url = "/"
     weight = 1
   [[menu.main]]
+    identifier = "transport"
+    name = "Rozwiązania drogowe"
+    url = "/transport/"
+    weight = 2
+  [[menu.main]]
     identifier = "konferencja"
     name = "Konferencja"
     url = "/konferencja/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     identifier = "faq"
     name = "Najczęściej zadawane pytania"
     url = "/faq/"
-    weight = 3
+    weight = 4
   [[menu.main]]
     identifier = "kim-jestesmy"
     name = "Kim jesteśmy?"
     url = "/kim-jestesmy/"
-    weight = 4
+    weight = 5
   [[menu.main]]
     identifier = "jak-dolaczyc"
     name = "Jak dołączyć"
     url = "/jak-dolaczyc/"
-    weight = 5
+    weight = 6
 
 [markup]
   [markup.goldmark]

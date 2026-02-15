@@ -15,10 +15,11 @@ Static website built with Hugo for an architectural/urbanist project about resto
 ├── config.toml          # Site config (title, menu, footer params)
 ├── content/
 │   ├── _index.md        # Homepage - photo grid config & text
+│   ├── transport.md     # Transport page (uses sections layout)
 │   ├── konferencja.md   # Conference page - video list
 │   ├── faq.md           # FAQ questions (accordion)
 │   ├── kim-jestesmy.md  # Partners list
-│   └── jak-dolaczyc.md  # Join page text
+│   └── jak-dolaczyc.md  # Join page (uses sections layout)
 ├── layouts/
 │   ├── index.html       # Homepage template
 │   ├── _default/        # Page templates (baseof, single, faq, konferencja, etc.)
@@ -37,30 +38,44 @@ Static website built with Hugo for an architectural/urbanist project about resto
 
 ## Content Editing
 
-### Homepage photos (`content/_index.md`)
+### Homepage rows (`content/_index.md`)
 
 ```yaml
-images:
-  - file: "photo.jpg"           # Regular image (1/3 width)
-    alt: "Description of image" # Alt text for accessibility (recommended)
-  - file: "photo2.jpg"
-    wide: true                  # Wide image (2/3 width, others stack)
-  - file: "photo3.jpg"
-    superwide: true             # Full row width
+rows:
+  - images:                         # Image row (up to 3 images)
+      - file: "photo1.jpg"
+        alt: "Description"          # Alt text (recommended)
+      - file: "photo2.jpg"
+        wide: true                  # Wide image (2/3 width)
+      - file: "photo3.jpg"
+  - text: |                         # Text row (full width, markdown)
+      ## Section heading
+      Description text between image rows.
+  - youtube: "VIDEO_ID"             # YouTube video row
+  - images:
+      - file: "photo4.jpg"
+        superwide: true             # Full row width
 ```
 
+**Row types:**
+- `images` - Photo row with up to 3 images per row
+- `text` - Full-width markdown content between image rows
+- `youtube` - Embedded YouTube video (just the video ID, not full URL)
+
+**Image options:**
+- `wide: true` - Image takes 2/3 width, other 2 stack vertically
+- `superwide: true` - Image takes full row width
+- `alt` - Alt text for accessibility (recommended)
+
 **Grid layout rules:**
-- 3 images per row
 - Only 1 wide image per row allowed
-- Wide image takes 2/3 width, other 2 images stack vertically in remaining 1/3
-- Wide image position (1st, 2nd, 3rd in the group of 3) determines layout
-- Superwide images get their own full-width row (rendered after regular images)
-- Order in the YAML list = order on page (no alphabetical sorting)
+- Wide image position (1st, 2nd, 3rd) determines layout
+- Order in YAML = order on page
 
 **To add new photos:**
 1. Put image file in `static/wizualizacje/`
 2. Generate thumbnail: `sips -Z 1200 static/wizualizacje/FILENAME --out static/wizualizacje/thumbs/FILENAME`
-3. Add entry to `images:` list in `content/_index.md`
+3. Add entry to a row's `images:` list
 
 Note: The grid displays thumbnails (from `thumbs/`) for fast loading; clicking opens full-resolution image.
 
@@ -86,6 +101,30 @@ videos:
       Description text visible in collapsed and expanded states.
 ```
 
+### Sections layout (`content/transport.md`, `content/jak-dolaczyc.md`)
+
+Generic layout for content pages with text and optional images. Uses `layout: "sections"`.
+
+```yaml
+sections:
+  - title: "Section title"          # Optional
+    content: |                      # Supports markdown
+      Text content for this section.
+
+      - Bullet points work
+      - Multiple paragraphs too
+    image: "photo.webp"             # Optional - from static/wizualizacje/
+    imagePosition: "right"          # Optional - "right" (default) or "left"
+    alt: "Image description"        # Alt text for accessibility
+```
+
+**Section types:**
+- Text only: omit `image` field
+- Text + image right: set `imagePosition: "right"` (or omit, it's default)
+- Text + image left: set `imagePosition: "left"`
+
+Images are loaded from `static/wizualizacje/` (same as homepage photos).
+
 ### FAQ (`content/faq.md`)
 
 ```yaml
@@ -105,12 +144,6 @@ intro: |
 ```
 
 Displayed at the top of the page. Supports markdown for formatting.
-
-### YouTube video (`content/_index.md`)
-
-```yaml
-youtubeID: "Z0LpndsMA0w"    # Just the ID, not full URL
-```
 
 ## Site Config (`config.toml`)
 

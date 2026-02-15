@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="page-container">
+  {{/* Sections with text and images */}}
+  {{ range .Params.sections }}
+  {{ $section := . }}
+  <section class="section-block{{ if .image }} has-image image-{{ .imagePosition | default "right" }}{{ end }}">
+    <div class="section-content">
+      {{ with .title }}
+      <h3 class="section-title">{{ . }}</h3>
+      {{ end }}
+      <div class="section-text">
+        {{ .content | markdownify }}
+      </div>
+    </div>
+    {{ with .image }}
+    <div class="section-image">
+      <img src="{{ printf "wizualizacje/%s" . | relURL }}" alt="{{ $section.alt | default "Wizualizacja projektu" }}" loading="lazy">
+    </div>
+    {{ end }}
+  </section>
+  {{ end }}
+
+  {{/* Main content from markdown body */}}
+  {{ with .Content }}
+  <div class="content-section">
+    {{ . }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}
