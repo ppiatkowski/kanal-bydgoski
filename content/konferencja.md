@@ -2,7 +2,7 @@
 title: "Konferencja"
 layout: "konferencja"
 intro: |
-  Konferencja "Kanał Bydgoski - Ukryty Potencjał" odbyła się 18 listopada 2025 roku w Muzeum Kanału Bygoskiego w Bydgoszczy z inicjatywy Bydgoskiego Ruchu Miejskiego.  Zapraszamy do obejrzenia materiałów wideo z wydarzenia.
+  Koncepcja przywrócenia Starego Kanału Bydgoskiego została zaprezentowana podczas konferencji "Kanał Bydgoski - Ukryty Potencjał", która odbyła się 18 listopada 2025 roku w Muzeum Kanału Bygoskiego w Bydgoszczy z inicjatywy Bydgoskiego Ruchu Miejskiego. Zapraszamy do zapoznania się z materiałami wideo z wydarzenia.
   
 outro: |
  Konferencję zakończyła debata ekspertów z udziałem:
