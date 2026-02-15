@@ -4,7 +4,7 @@
 
   {{/* Intro paragraph */}}
   {{ with .Params.intro }}
-  <p class="intro-text">{{ . }}</p>
+  <div class="intro-text">{{ . | markdownify }}</div>
   {{ end }}
 
   {{/* Photo Grid - rows of 3 images, superwide gets its own row */}}

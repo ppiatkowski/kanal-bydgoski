@@ -82,6 +82,8 @@ partners:
 videos:
   - title: "Speaker: Talk title"
     youtubeID: "VIDEO_ID"        # Just the ID, not full URL
+    description: |               # Optional - supports markdown
+      Description text visible in collapsed and expanded states.
 ```
 
 ### FAQ (`content/faq.md`)
@@ -92,13 +94,17 @@ questions:
     answer: "Answer text."
 ```
 
-### Intro text (`content/_index.md`)
+### Intro text (`content/_index.md`, `content/konferencja.md`)
 
 ```yaml
-intro: "Your intro paragraph text here."
+intro: |
+  Your intro paragraph text here. Supports **markdown** formatting.
+
+  - Bullet points
+  - Multiple paragraphs (separate with blank line)
 ```
 
-Displayed at the top of the homepage above the photo grid.
+Displayed at the top of the page. Supports markdown for formatting.
 
 ### YouTube video (`content/_index.md`)
 
