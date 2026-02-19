@@ -3,6 +3,52 @@ function isValidYoutubeId(id) {
   return typeof id === 'string' && /^[a-zA-Z0-9_-]{11}$/.test(id);
 }
 
+// Header background parallax scroll with fade
+const headerBgEl = document.querySelector('.header-bg');
+const headerOverlay = document.querySelector('.header-overlay');
+const header = document.querySelector('.site-header');
+
+if (headerBgEl && headerOverlay && header) {
+  let fadeDistance = 400; // default fallback
+
+  // Calculate fade distance based on actual image dimensions
+  const img = new Image();
+  img.onload = function() {
+    const headerHeight = header.offsetHeight;
+    const viewportWidth = window.innerWidth;
+
+    // With background-size: cover, image scales to fill width
+    const scale = viewportWidth / img.naturalWidth;
+    const scaledHeight = img.naturalHeight * scale;
+
+    // Available scroll distance before image runs out
+    fadeDistance = Math.max(100, scaledHeight - headerHeight - 50);
+  };
+  img.src = '/header_background.webp';
+
+  let ticking = false;
+
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        const scrollY = window.scrollY;
+        const opacity = Math.max(0, 1 - scrollY / fadeDistance);
+
+        // Directly set styles on the elements
+        headerBgEl.style.transform = 'translateY(' + (-scrollY) + 'px)';
+        headerBgEl.style.opacity = opacity;
+        headerOverlay.style.opacity = opacity;
+
+        headerBgEl.classList.toggle('bg-hidden', opacity === 0);
+        headerOverlay.classList.toggle('bg-hidden', opacity === 0);
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Gallery lightbox
   const gallery = document.querySelector('.gallery-lightbox');
