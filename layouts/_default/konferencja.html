@@ -8,7 +8,10 @@
     {{ range .Params.videos }}
     <div class="video-card" data-youtube-id="{{ .youtubeID }}">
       <button class="video-card-header" aria-expanded="false">
-        <img class="video-card-thumb" src="https://img.youtube.com/vi/{{ .youtubeID }}/hqdefault.jpg" alt="{{ .title }}" width="240" height="135" loading="lazy">
+        <div class="video-card-thumb-wrap">
+          <img class="video-card-thumb" src="https://img.youtube.com/vi/{{ .youtubeID }}/hqdefault.jpg" alt="{{ .title }}" width="240" height="135" loading="lazy">
+          <svg class="video-card-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="rgba(0,0,0,0.55)"/><polygon points="9,8 17,12 9,16" fill="white"/></svg>
+        </div>
         <div class="video-card-text">
           <span class="video-card-title">{{ .title }}</span>
           {{ with .description }}
