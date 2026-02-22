@@ -1113,6 +1113,10 @@ img {
     order: unset;
   }
 
+  .section-images-multi {
+    flex-direction: column;
+  }
+
   .section-image {
     margin-top: 1.5rem;
   }
