@@ -1,14 +1,15 @@
 ---
 layout: "sections"
 sections:
-  - title: "Przywrócenie Kanału doskonalne wpisuje się w drogowe plany miasta"
+  - title: "Przywrócenie Kanału wpisuje się w drogowe plany miasta"
     content: |
      Powrót Kanału jest uzależniony od istotnych zmian w układzie drogowym miasta. Te zmiany są planowane niezależnie od koncepcji przywrócenia Kanału. Nasza propozycja nie zmusza do zmiany kierunków wyznaczonych w dokumentach planistycznych miasta. Przeciwnie - doskonale się w nie wpisuje. Zmiany układu drogowego, które i tak są planowane, otwierają drogę od przywrócenia Kanału.
      
-     Przywrócenie Kanału **nie oznacza likwidacji ulicy Focha**. Nie jest też planem na najbliższe lata. Konieczne inwestycje drogowe zajmą **co najmniej kilkanaście lat**.
+     Przywrócenie Kanału **nie oznacza likwidacji ulicy Focha**. Nie jest też planem na najbliższe lata. Konieczne inwestycje drogowe zajmą **co najmniej kilkanaście lat.**
 
   - title: "Przyszłość układu drogowego wokół centrum miasta"
     content: |
+      Planowane inwestycje drogowe:
       - Trasa WZ w standardzie 2x2 od Ronda Maczka do Wiaduktów Warszawskich
       - Rozbudowa ulic Solskiego i Pięknej
       - Most łączący ulice Graniczną oraz Unii Lubelskiej
@@ -22,8 +23,18 @@ sections:
             text: "Wąskie gardło ciągu Focha-Jagiellońska"
             side: "bottom" 
       - file: "transport/docelowy.jpeg"
-        alt: "Docelowy układ drogowy centrum miasta"
-        caption: "Docelowy układ drogowy centrum miasta"
+        alt: "Przyszły układ drogowy centrum miasta"
+        caption: "Przyszły układ drogowy centrum miasta"
+        legend:
+          - color: "#ffa692"
+            text: "Nowe inwestycje drogowe"
+          - color: "#36596c"
+            opacity: 0.6
+            text: "Wewnętrzna obwodnica centrum miasta"
+        overlay: "transport/obwodnica.png"
+        overlayDuration: 3
+        overlayOpacityMin: 0.0
+        overlayOpacityMax: 0.6
         markers:
           - x: 57
             y: 11
@@ -35,11 +46,11 @@ sections:
             side: "bottom"
           - x: 35
             y: 30.5
-            text: "Nowy most przez Brdę łączący ulice Graniczną i Unii Lubelskiej"
+            text: "Nowy most łączący ulice Graniczną i Unii Lubelskiej"
   - content: |
-      Dwie pierwsze inwestycje stworzą wewnętrzną obwodnicę centrum miasta, która pozwoli ruchowi wschód-zachód omijać ścisłe centrum. Ulica Focha będzie obsługiwać ruch lokalny i docelowy co otwiera drogę do jej uspokojenia. Te plany są już wpisane w dokumenty planistyczne miasta niezależnie od naszej propozycji związenej z przywróceniem Kanału.
+      Trasa WZ oraz rozbudowa ulic Solskiego i Pięknej stworzą wewnętrzną obwodnicę centrum miasta, która pozwoli ruchowi wschód-zachód omijać ścisłe centrum. Ulica Focha będzie obsługiwać ruch lokalny i docelowy co otwiera drogę do jej uspokojenia. Te plany są już wpisane w dokumenty planistyczne miasta niezależnie od naszej propozycji związenej z przywróceniem Kanału.
       
-      Dodatkowo nowy most nad Brdą nad przedłużeniu ulicy Granicznej odciaży Most Królowej Jadwigi oraz ulicę Focha na odcinku Rondo Grunwaldzkie-Węzeł Garbary.
+      Dodatkowo nowy most nad Brdą na przedłużeniu ulicy Granicznej odciąży Most Królowej Jadwigi oraz ulicę Focha na odcinku Rondo Grunwaldzkie-Węzeł Garbary.
 
   - title: "Dlaczego te zmiany są konieczne?"
     content: |

@@ -23,7 +23,18 @@
           <div class="section-image-wrap">
             <div class="section-image-frame">
               <img src="{{ .file | relURL }}" alt="{{ .alt | default "" }}" loading="lazy">
+              {{ with .overlay }}<img src="{{ . | relURL }}" class="image-overlay" alt="" aria-hidden="true" style="--overlay-duration: {{ $img.overlayDuration | default "3" }}s; --overlay-min: {{ $img.overlayOpacityMin | default "0" }}; --overlay-max: {{ $img.overlayOpacityMax | default "1" }}">{{ end }}
               {{ with .caption }}<figcaption class="image-caption">{{ . }}</figcaption>{{ end }}
+              {{ with .legend }}
+              <div class="image-legend">
+                {{ range . }}
+                <div class="legend-item">
+                  <span>{{ .text }}</span>
+                  <span class="legend-line" style="background-color: {{ .color }}; opacity: {{ .opacity | default 1 }}"></span>
+                </div>
+                {{ end }}
+              </div>
+              {{ end }}
             </div>
             {{ with .markers }}
             <div class="image-markers">
@@ -44,7 +55,18 @@
       <div class="section-image-wrap">
         <div class="section-image-frame">
           <img src="{{ .image | relURL }}" alt="{{ $section.alt | default "" }}" loading="lazy">
+          {{ with $section.overlay }}<img src="{{ . | relURL }}" class="image-overlay" alt="" aria-hidden="true" style="--overlay-duration: {{ $section.overlayDuration | default "3" }}s; --overlay-min: {{ $section.overlayOpacityMin | default "0" }}; --overlay-max: {{ $section.overlayOpacityMax | default "1" }}">{{ end }}
           {{ with $section.caption }}<figcaption class="image-caption">{{ . }}</figcaption>{{ end }}
+          {{ with $section.legend }}
+          <div class="image-legend">
+            {{ range . }}
+            <div class="legend-item">
+              <span>{{ .text }}</span>
+              <span class="legend-line" style="background-color: {{ .color }}; opacity: {{ .opacity | default 1 }}"></span>
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
         </div>
         {{ with $section.markers }}
         <div class="image-markers">

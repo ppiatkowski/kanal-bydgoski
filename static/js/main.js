@@ -169,6 +169,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Image marker popovers — clamp to viewport
+  document.querySelectorAll('.image-marker').forEach(function(marker) {
+    var popover = marker.querySelector('.marker-popover');
+    if (!popover) return;
+
+    function clampPopover() {
+      popover.style.transform = '';
+      popover.style.setProperty('--arrow-shift', '0px');
+      var rect = popover.getBoundingClientRect();
+      var margin = 8;
+      if (rect.right > window.innerWidth - margin) {
+        var shift = rect.right - window.innerWidth + margin;
+        popover.style.transform = 'translateX(calc(-50% - ' + shift + 'px))';
+        popover.style.setProperty('--arrow-shift', shift + 'px');
+      } else if (rect.left < margin) {
+        var shift = margin - rect.left;
+        popover.style.transform = 'translateX(calc(-50% + ' + shift + 'px))';
+        popover.style.setProperty('--arrow-shift', '-' + shift + 'px');
+      }
+    }
+
+    marker.addEventListener('mouseenter', clampPopover);
+    marker.addEventListener('focusin', clampPopover);
+  });
+
   // Video card accordion
   var videoCards = document.querySelectorAll('.video-card');
 

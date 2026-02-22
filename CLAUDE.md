@@ -115,6 +115,8 @@ sections:
       - Bullet points work
       - Multiple paragraphs too
     image: "transport/photo.webp"   # Optional - single image, path relative to static/
+    overlay: "transport/overlay.webp" # Optional - image that fades in/out over the main image
+    overlayDuration: 3              # Optional - fade cycle duration in seconds (default: 3)
     markers:                        # Optional - interactive markers on single image
       - x: 30                       # Horizontal position (0-100, % from left)
         y: 45                       # Vertical position (0-100, % from top)
@@ -124,6 +126,14 @@ sections:
       - file: "transport/photo1.webp"
         alt: "Description"
         caption: "Caption"          # Optional
+        overlay: "transport/overlay.webp" # Optional - image fading in/out over this image
+        overlayDuration: 3          # Optional - fade cycle in seconds (default: 3)
+        overlayOpacityMin: 0        # Optional - minimum opacity (default: 0)
+        overlayOpacityMax: 1        # Optional - maximum opacity (default: 1)
+        legend:                     # Optional - map legend pills at bottom-right
+          - color: "#36596c"
+            opacity: 0.8            # Optional - line opacity 0-1 (default: 1)
+            text: "Obwodnica centrum"
       - file: "transport/photo2.webp"
         alt: "Description"
     imagePosition: "right"          # Optional - "right" (default) or "left"
