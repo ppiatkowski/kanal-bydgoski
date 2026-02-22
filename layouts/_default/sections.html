@@ -3,7 +3,7 @@
   {{/* Sections with text and images */}}
   {{ range .Params.sections }}
   {{ $section := . }}
-  <section class="section-block{{ if .image }} has-image image-{{ .imagePosition | default "right" }}{{ end }}">
+  <section class="section-block{{ if .image }} has-image image-{{ .imagePosition | default "right" }}{{ else if .images }} has-images{{ end }}">
     <div class="section-content">
       {{ with .title }}
       <h3 class="section-title">{{ . }}</h3>
@@ -12,10 +12,53 @@
         {{ .content | markdownify }}
       </div>
     </div>
-    {{ with .image }}
-    <div class="section-image">
-      <img src="{{ printf "wizualizacje/%s" . | relURL }}" alt="{{ $section.alt | default "Wizualizacja projektu" }}" loading="lazy">
-    </div>
+    {{ if or .image .images }}
+    <figure class="section-image">
+      {{ if .images }}
+      {{/* Multiple images side by side */}}
+      <div class="section-images-multi">
+        {{ range .images }}
+        {{ $img := . }}
+        <div class="section-image-item">
+          <div class="section-image-wrap">
+            <div class="section-image-frame">
+              <img src="{{ .file | relURL }}" alt="{{ .alt | default "" }}" loading="lazy">
+              {{ with .caption }}<figcaption class="image-caption">{{ . }}</figcaption>{{ end }}
+            </div>
+            {{ with .markers }}
+            <div class="image-markers">
+              {{ range . }}
+              <div class="image-marker" style="left: {{ .x }}%; top: {{ .y }}%">
+                <button class="marker-dot" aria-label="{{ .text }}"></button>
+                <div class="marker-popover{{ if eq .side "bottom" }} marker-popover--bottom{{ end }}">{{ .text }}</div>
+              </div>
+              {{ end }}
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ else }}
+      {{/* Single image */}}
+      <div class="section-image-wrap">
+        <div class="section-image-frame">
+          <img src="{{ .image | relURL }}" alt="{{ $section.alt | default "" }}" loading="lazy">
+          {{ with $section.caption }}<figcaption class="image-caption">{{ . }}</figcaption>{{ end }}
+        </div>
+        {{ with $section.markers }}
+        <div class="image-markers">
+          {{ range . }}
+          <div class="image-marker" style="left: {{ .x }}%; top: {{ .y }}%">
+            <button class="marker-dot" aria-label="{{ .text }}"></button>
+            <div class="marker-popover{{ if eq .side "bottom" }} marker-popover--bottom{{ end }}">{{ .text }}</div>
+          </div>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </figure>
     {{ end }}
   </section>
   {{ end }}

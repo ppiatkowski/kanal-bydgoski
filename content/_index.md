@@ -8,40 +8,40 @@ rows:
         TODO po śladzie oryginalnego przebiegu kanału (moze grafika pokazujaca oryginalny przebieg).  
         TODO dlaczego warto, jakie zalety
   - images:
-      - file: "BRM_01.webp"
+      - file: "wizualizacje/BRM_01.webp"
         wide: true
         alt: "Wizualizacja przywróconego Starego Kanału Bydgoskiego wzdłuż ulicy Focha"
-      - file: "BRM_02.webp"
+      - file: "wizualizacje/BRM_02.webp"
         alt: ""
-      - file: "BRM_13.webp"
+      - file: "wizualizacje/BRM_13.webp"
         alt: ""
   - text: |
         Text content here with **markdown** support.
   - images:
-      - file: "BRM_18.webp"
+      - file: "wizualizacje/BRM_18.webp"
         alt: ""
-      - file: "BRM_19.webp"
+      - file: "wizualizacje/BRM_19.webp"
         alt: ""
-      - file: "BRM_03.webp"
+      - file: "wizualizacje/BRM_03.webp"
         wide: true
         alt: ""
   - images:
-      - file: "BRM_06.webp"
+      - file: "wizualizacje/BRM_06.webp"
         wide: true
         alt: ""
-      - file: "BRM_21.webp"
+      - file: "wizualizacje/BRM_21.webp"
         alt: ""
-      - file: "BRM_22.webp"
-        alt: ""
-  - images:
-      - file: "BRM_91.webp"
-        alt: ""
-      - file: "BRM_93.webp"
-        alt: ""
-      - file: "BRM_94.webp"
+      - file: "wizualizacje/BRM_22.webp"
         alt: ""
   - images:
-      - file: "funkcje.webp"
+      - file: "wizualizacje/BRM_91.webp"
+        alt: ""
+      - file: "wizualizacje/BRM_93.webp"
+        alt: ""
+      - file: "wizualizacje/BRM_94.webp"
+        alt: ""
+  - images:
+      - file: "wizualizacje/funkcje.webp"
         superwide: true
         alt: ""
   - youtube: "Z0LpndsMA0w"

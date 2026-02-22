@@ -43,17 +43,18 @@ Static website built with Hugo for an architectural/urbanist project about resto
 ```yaml
 rows:
   - images:                         # Image row (up to 3 images)
-      - file: "photo1.jpg"
+      - file: "wizualizacje/photo1.jpg"  # Path relative to static/
         alt: "Description"          # Alt text (recommended)
-      - file: "photo2.jpg"
+        caption: "Caption text"     # Optional - displayed below image
+      - file: "wizualizacje/photo2.jpg"
         wide: true                  # Wide image (2/3 width)
-      - file: "photo3.jpg"
+      - file: "wizualizacje/photo3.jpg"
   - text: |                         # Text row (full width, markdown)
       ## Section heading
       Description text between image rows.
   - youtube: "VIDEO_ID"             # YouTube video row
   - images:
-      - file: "photo4.jpg"
+      - file: "wizualizacje/photo4.jpg"
         superwide: true             # Full row width
 ```
 
@@ -73,11 +74,11 @@ rows:
 - Order in YAML = order on page
 
 **To add new photos:**
-1. Put image file in `static/wizualizacje/`
-2. Generate thumbnail: `sips -Z 1200 static/wizualizacje/FILENAME --out static/wizualizacje/thumbs/FILENAME`
-3. Add entry to a row's `images:` list
+1. Put image file in `static/` (e.g. `static/wizualizacje/photo.jpg`)
+2. Generate thumbnail in a `thumbs/` subfolder alongside the image: `sips -Z 1200 static/wizualizacje/photo.jpg --out static/wizualizacje/thumbs/photo.jpg`
+3. Add entry to a row's `images:` list using the path relative to `static/`: `file: "wizualizacje/photo.jpg"`
 
-Note: The grid displays thumbnails (from `thumbs/`) for fast loading; clicking opens full-resolution image.
+Note: The grid displays thumbnails (from a `thumbs/` subfolder next to the image) for fast loading; clicking opens full-resolution image.
 
 ### Partners (`content/kim-jestesmy.md`)
 
@@ -113,9 +114,21 @@ sections:
 
       - Bullet points work
       - Multiple paragraphs too
-    image: "photo.webp"             # Optional - from static/wizualizacje/
+    image: "transport/photo.webp"   # Optional - single image, path relative to static/
+    markers:                        # Optional - interactive markers on single image
+      - x: 30                       # Horizontal position (0-100, % from left)
+        y: 45                       # Vertical position (0-100, % from top)
+        text: "Popover text"
+        side: "bottom"              # Optional - "bottom" if marker is near top edge (default: top)
+    images:                         # Optional - two images side by side (use instead of image:)
+      - file: "transport/photo1.webp"
+        alt: "Description"
+        caption: "Caption"          # Optional
+      - file: "transport/photo2.webp"
+        alt: "Description"
     imagePosition: "right"          # Optional - "right" (default) or "left"
-    alt: "Image description"        # Alt text for accessibility
+    alt: "Image description"        # Alt text for accessibility (single image only)
+    caption: "Caption text"         # Optional - displayed below image (single image only)
 ```
 
 **Section types:**
@@ -123,7 +136,7 @@ sections:
 - Text + image right: set `imagePosition: "right"` (or omit, it's default)
 - Text + image left: set `imagePosition: "left"`
 
-Images are loaded from `static/wizualizacje/` (same as homepage photos).
+Images are loaded from `static/` — use the path relative to that folder (e.g. `wizualizacje/photo.jpg`, `transport/photo.jpg`).
 
 ### FAQ (`content/faq.md`)
 
