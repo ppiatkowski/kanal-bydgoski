@@ -2,21 +2,25 @@
 title: "Najczęściej zadawane pytania"
 layout: "faq"
 questions:
-  - question: "Czym jest projekt Kanał Bydgoski - Ukryty Potencjał?"
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+  - question: "Skąd pomysł?"
+    answer: "Na początku 2025 roku do Stowarzyszenia Bydgoski Ruch Miejski dołączył Karol Mieczkin, który badał możliwość przywrócenia Kanału w ramach swojej pracy magisterskiej. Tak powstał pomysł stworzenia koncepcji pokazującej jak przywrócony Kanał mógłby wyglądać w rzeczywistości. W tym celu Bydgoski Ruch Miejski nawiązał współpracę z architektem Pawłem Mrozkiem, który przygotował wizualizację zaprezentowaną ostatecznie podczas [konferencji \"Kanał Bydgoski - Ukryty Potencjał\"](../konferencja)."
 
-  - question: "Kto stoi za tym projektem?"
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae."
+  - question: "Kto stoi za tą koncepcją?"
+    answer: "Koncepcja, która stała się przyczynkiem do powstania tego Komitetu narodziła się w stowarzyszeniu Bydgoski Ruch Miejski. Na fali entuzjazmu i wyrazów poparcia postanowiliśmy powołać Komitet zrzeszający organizacje i osoby popierające pomysł. Lista jego członków jest dostępna na podstronie [Kim Jesteśmy](../kim-jestesmy)."
 
-  - question: "Jakie są główne cele projektu?"
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."
+  - question: "Dlaczego to robicie?"
+    answer: "Chcemy żyć w pięknym, nowoczesnym, przyjaznym i zielonym mieście."
 
-  - question: "Kiedy planowana jest realizacja?"
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra."
+  - question: "Jakie są cele projektu?"
+    answer: "Celem jest przywrócenie Kanału Bydgoskiego na odcinku od Ronda Grunwaldzkiego do Brdy wzdłuż ulicy Focha. Jeden z możliwych sposobów realizacji tego celu pokazuje [koncepcja](..) zaprezentowana na [konferencji \"Kanał Bydgoski - Ukryty Potencjał\"](../konferencja) jednak pozostajemy otwarci na alternatywne warianty."
+
+  - question: "Chcecie zamknięcia ulicu Focha?"
+    answer: "Nie. Nasza koncepcja nie wymaga zamykania ulicy Focha. Szczegóły na podstronie dotyczącej [rozwiązań transportowych](../transport)."
+
+  - question: "Kiedy realizacja?"
+    answer: "Prawdopodobnie nie wcześniej niż za kilkanaście lat. Wszystko zależy od tempa inwestycji, które [są warunkiem przywrócenia Kanału](../transport)."
 
   - question: "Jak mogę wesprzeć projekt?"
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu libero sit amet quam egestas semper. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet."
+    answer: "Dołącz do nas! To nic nie kosztuje. Napisz do nas na adres stowarzyszenie@bydgoskiruchmiejski.pl."
 
-  - question: "Gdzie mogę znaleźć więcej informacji?"
-    answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras accumsan, sapien eget tincidunt fermentum, nunc nulla ultricies nunc, vel tincidunt nunc nunc vel nunc."
 ---

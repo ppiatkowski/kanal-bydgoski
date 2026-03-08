@@ -146,29 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // FAQ accordion
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(function(item) {
-    const question = item.querySelector('.faq-question');
-
-    if (question) {
-      question.addEventListener('click', function() {
-        // Close other items
-        faqItems.forEach(function(otherItem) {
-          if (otherItem !== item) {
-            otherItem.classList.remove('active');
-            otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-          }
-        });
-
-        // Toggle current item
-        item.classList.toggle('active');
-        question.setAttribute('aria-expanded', item.classList.contains('active') ? 'true' : 'false');
-      });
-    }
-  });
-
   // Image marker popovers — clamp to viewport
   document.querySelectorAll('.image-marker').forEach(function(marker) {
     var popover = marker.querySelector('.marker-popover');
