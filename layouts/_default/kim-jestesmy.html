@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="page-container">
-  <p class="partners-intro">{{ .Params.intro }}</p>
+  <div class="partners-intro">{{ .Params.intro | markdownify }}</div>
 
   <div class="partners-grid">
     {{ range .Params.partners }}

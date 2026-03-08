@@ -30,14 +30,9 @@ title = "Komitet Poparcia Przywrócenia Starego Kanału Bydgoskiego"
     weight = 4
   [[menu.main]]
     identifier = "kim-jestesmy"
-    name = "Kim jesteśmy?"
+    name = "Kim jesteśmy"
     url = "/kim-jestesmy/"
     weight = 5
-  [[menu.main]]
-    identifier = "jak-dolaczyc"
-    name = "Jak dołączyć"
-    url = "/jak-dolaczyc/"
-    weight = 6
 
 [markup]
   [markup.goldmark]

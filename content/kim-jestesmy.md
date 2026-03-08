@@ -1,7 +1,10 @@
 ---
 title: "Kim jesteśmy?"
 layout: "kim-jestesmy"
-intro: "Jesteśmy nieformalną grupą organizacji i osób, którym zależy na przyszłości Bydgoszczy"
+intro: |
+  Jesteśmy nieformalną grupą. Nie pobieramy składek członkowskich. 
+  
+  Chcesz dołączyć? Napisz do nas na adres stowarzyszenie@bydgoskiruchmiejski.pl.
 partners:
   - name: "Bydgoski Ruch Miejski"
     logo: "logo/BydgoskiRuchMiejski.png"
@@ -30,7 +33,7 @@ partners:
   - name: "Stowarzyszenie Ochrony Narodowego Dziedzictwa Materialnego"
     logo: "logo/SONDM.png"
   - name: 'Regionalny Oddział PTTK „Szlak Brdy"'
-    logo: "logo/szlak-brdy_logo_invers.svg"
+    logo: "logo/szlak-brdy.svg"
   - name: "Wydział Nauk Geograficznych Uniwersytetu Kazimierza Wielkiego w Bydgoszczy"
     logo: "logo/ukw-mini.svg"
   - name: "La Mare Houseboats"

@@ -18,8 +18,7 @@ Static website built with Hugo for an architectural/urbanist project about resto
 │   ├── transport.md     # Transport page (uses sections layout)
 │   ├── konferencja.md   # Conference page - video list
 │   ├── faq.md           # FAQ questions (accordion)
-│   ├── kim-jestesmy.md  # Partners list
-│   └── jak-dolaczyc.md  # Join page (uses sections layout)
+│   └── kim-jestesmy.md  # Partners list
 ├── layouts/
 │   ├── index.html       # Homepage template
 │   ├── _default/        # Page templates (baseof, single, faq, konferencja, etc.)
@@ -102,7 +101,7 @@ videos:
       Description text visible in collapsed and expanded states.
 ```
 
-### Sections layout (`content/transport.md`, `content/jak-dolaczyc.md`)
+### Sections layout (`content/transport.md`)
 
 Generic layout for content pages with text and optional images. Uses `layout: "sections"`.
 
