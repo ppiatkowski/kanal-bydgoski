@@ -181,3 +181,5 @@ Displayed at the top of the page. Supports markdown for formatting.
 - **Logo paths in kim-jestesmy.md** use relative paths without leading slash: `logo/file.png` (not `/logo/file.png`)
 - **After adding/changing images**, Hugo dev server auto-rebuilds; just refresh browser
 - **baseURL in config.toml** is set for GitHub Pages deployment
+
+push
